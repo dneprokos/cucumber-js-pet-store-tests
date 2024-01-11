@@ -34,8 +34,18 @@ Support folder contains all common support implementation. As an example it cont
 ![Hooks Image](/images/hooks.png)
 
 # Run features
+
+## Tests configuration
+In the root repo you may find a file with a name ".env". At this moment it contains "BASE_URL" key-value. But it may be extended in the future with other configuration properties. This property will be saved to 'config.js' file and you can read it from  any file in the repository
+
+![Read from config Image](/images/read_from_config_file.png)
+
+## Tests/Featues run
+
 Open command prompt and run any of these commands 
 
 - "npx cucumber-js"
 - "npm test"
+
+![Run the tests Image](/images/run_tests.png)
 
