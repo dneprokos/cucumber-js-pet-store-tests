@@ -1,6 +1,6 @@
-import { BaseApiController } from './BaseApiController'
+const BaseApiController = require('../../baseApiController')
 
-export class PetResourceApiRequests extends BaseApiController {
+class PetResourceApiRequests extends BaseApiController {
   async getPetById (id) {
     try {
       const response = await this.instance.get(`/pet/${id}`)
@@ -14,7 +14,7 @@ export class PetResourceApiRequests extends BaseApiController {
    * @description: Create a pet
    * @param: {Object} Pet
    */
-  async postPet (pet) {
+  async createPet (pet) {
     try {
       const response = await this.instance.post('/pet', pet)
       return response
@@ -23,3 +23,5 @@ export class PetResourceApiRequests extends BaseApiController {
     }
   }
 }
+
+module.exports = PetResourceApiRequests

@@ -1,7 +1,7 @@
-import axios from 'axios'
-import envConfig from '@env'
+const axios = require('axios')
+const envConfig = require('env')
 
-export default class BaseApiController {
+class BaseApiController {
   constructor () {
     this.instance = axios.create({
       baseURL: envConfig.baseURL,
@@ -11,3 +11,5 @@ export default class BaseApiController {
     })
   }
 }
+
+module.exports = BaseApiController

@@ -13,7 +13,7 @@ Given('I have the following pet data', function (dataTable) {
 })
 
 When('I send a POST request to create a new pet', async function () {
-  response = await axios.post(`${baseUrl}pet`, petData)
+  response = await axios.post(`${baseUrl}pet`, petData) // TODO: Rework to use the API wrapper
 })
 
 Then('I should receive a status code of {int}', function (expectedStatusCode) {
